@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="hero">
+    <section class="hero-sec p-0">
+        <div class="hero-banner">
+            <div class="hero-slider">
+                <div class="slide-item">
+                    <img src="{{aboutHeroImage.SliderImage.url}}" class="img-fluid" alt="" style="height: 500px;">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+<div class="container">
+    <section class="booking-sec pt-0 pb-0">
+        <div class="booking-title text-center" >
+            <h1>About Us</h1>
+        </div>
+    </section>
+</div>
+<div class="faq">
+    <div class="container">
+        <section class="faq-sec">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-intro">
+                        <div class="section-title">
+                            <h2>WHY CHOOSE HOTEL AEROCITY?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-intro ps-5">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-lg-5 col-lg-7">
+                    <div class="faq-content ps-5">
+                        <div class="accordion" id="faq-collapse">
+                            {% for item in aboutDescription %}
+                            <div class="accordion-item">
+                                <h2 class="faq-title m-0 collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse{{item.Id}}" aria-expanded="false">
+                                    {{ item.Titile }}</h2>
+                                <div id="collapse{{item.Id}}" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body">
+                                        <p>{{ item.Description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="facilities">
+    <div class="container">
+        <section class="facilities-sec">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility1.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>GOOD FOOD</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility2.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>DESIRABLE LOCATION</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility3.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>EASY BOOKING</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility4.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>FULL PRIVACY</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility5.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>FRIENDLY STAFFS</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility6.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>COMFORTABLE STAY</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+<div class="hotel-beauty position-relative">
+    <div class="beauty-img h-100">
+        <div class="row  position-relative h-100">
+            <div class="offset-lg-6 col-lg-6">
+                <div class="hb-img position-relative h-100">
+                    <div class="single-main-thumb">
+                        <div class="single-thumb">
+                            <a href="{% static 'images/hero-img' %}.png" data-fancybox="img-preview"><img alt="product"
+                                    src="{% static 'images/hero-img' %}.png" class="img-fluid"></a>
+                        </div>
+                        <div class="single-thumb">
+                            <a href="{% static 'images/hero-img2' %}.png" data-fancybox="img-preview"><img alt="product"
+                                    src="{% static 'images/hero-img2' %}.png" class="img-fluid"></a>
+                        </div>
+
+                        <div class="single-thumb">
+                            <a href="{% static 'images/hero-img3' %}.png" data-fancybox="img-preview"><img alt="product"
+                                    src="{% static 'images/hero-img3' %}.png" class="img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="pager-thumbnail">
+
+                    <div class="pager-thumb active">
+                        <img src="{% static 'images/hero-img' %}.png" class="img-fluid">
+                    </div>
+                    <div class="pager-thumb">
+                        <img src="{% static 'images/hero-img2' %}.png" class="img-fluid">
+                    </div>
+                    <div class="pager-thumb">
+                        <img src="{% static 'images/hero-img3' %}.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="beauty-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-intro">
+                        <div class="section-title">
+                            <h2>AMENITIES OF HOTEL AEROCITY</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock content %}

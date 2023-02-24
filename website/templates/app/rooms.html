@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="hero">
+    <section class="hero-sec p-0">
+        <div class="hero-banner">
+            <div class="hero-slider">
+                <div class="slide-item">
+                    <img src="{{roomHeroImage.SliderImage.url}}" class="img-fluid" alt="" style="height: 500px;">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+<div class="container">
+        <section class="booking-sec pt-0 pb-0">
+            <div class="booking-title text-center" >
+                <h1>Book Rooms</h1>
+            </div>
+        </section>
+        <div class="features">
+            <div class="row">
+                {% for item in room %}
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <figure>
+                            <img src="{{item.TypeImage.url}}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>{{ item.TypeName }}</h2>
+                        <p>{{ item.TypeDescription }}</p>
+                        <ul class="booking-btn">
+                            <li><a href="#">BOOK NOW</a></li>
+                            <li><a href="#">ENQUIRE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+                       
+            </div>
+        </div>
+</div>
+<div class="booking-form position-relative pt-4">
+    <img src="{% static 'images/hero-img3' %}.png" class="img-fluid" alt="">
+    <section class="form-sec">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    BOOK A ROOM NOW
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div class="form-content">
+        <div class="container">
+            <form>
+                <div class="mobile-title d-none" >
+                <h2>
+                    BOOK A ROOM NOW
+                </h2>
+                </div>
+                <div class="row align-items-center justify-content-around">
+                    <div class="column">
+                        <div class="form-group">
+                            <input type="date" placeholder="Arrival Date" required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <input type="date" placeholder="Departure Date" required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <input type="text" placeholder="Room For">
+                            <span class="icon">
+                                <i class="fas fa-user-friends"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <select>
+                                <option value="" disabled selected>Room Type</option>
+                                {% for item in room %}
+                                    <option>{{item.TypeName}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <button>Book A Room</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="gallery">
+    <div class="container">
+        <section class="gallery-sec">
+            <div class="section-intro">
+                <div class="section-title">
+                    <h2>Our Gallery</h2>
+                </div>
+                <p>Take a glance at our beautiful hotel and everything inside of it</p>
+            </div>
+            <div class="gallery-slider pt-3">
+                {% for item in gallery %}
+                <div class="slide-item">
+                    <a href="javascript:volid(0)">
+                        <img src="{{item.SliderImages.url}}" class="img-fluid">
+                        <div class="gallery-intro">
+                            <div class="gallery-title">
+                                <h2>{{item.GalleryTitle}}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock content %}

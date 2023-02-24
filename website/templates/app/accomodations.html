@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="hero">
+    <section class="hero-sec p-0">
+        <div class="hero-banner">
+            <div class="hero-slider">
+                <div class="slide-item">
+                    <img src="{% static 'images/hero-img' %}.png" class="img-fluid">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/hero-img2' %}.png" class="img-fluid">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/hero-img3' %}.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<style>
+    .navbar-light .navbar-nav .nav-link{
+        color: white !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- <div class="hero">
+    <section class="hero-sec p-0">
+        <div class="hero-banner">
+            <div class="hero-slider">
+                <div class="slide-item">
+                    <img src="{% static 'images/hero-img' %}.png" class="img-fluid">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/hero-img2' %}.png" class="img-fluid">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/hero-img3' %}.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+</div> -->
+<div class="lg-image">
+    <section class="lg-sec p-0">
+        <img src="{% static 'images/hero-img2' %}.png" class="img-fluid" alt="">
+    </section>
+</div>
+<div class="faq">
+    <div class="container">
+        <section class="faq-sec">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-intro">
+                        <div class="section-title">
+                            <h2>WHY CHOOSE HOTEL AEROCITY?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-intro ps-5">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-lg-5 col-lg-7">
+                    <div class="faq-content ps-5">
+                        <div class="accordion" id="faq-collapse">
+                            <div class="accordion-item">
+                                <h2 class="faq-title m-0 collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="false">
+                                    World Class Services</h2>
+                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item ">
+                                <h2 class="faq-title m-0 collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false">
+                                    Spacious Rooms </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body ">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item ">
+                                <h2 class="faq-title m-0 collapsed " data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="">
+                                    Affordable</h2>
+                                <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="heading3"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item ">
+                                <h2 class="faq-title m-0 collapsed " data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="">
+                                    DESIRABLE LOCATION</h2>
+                                <div id="collapse4" class="accordion-collapse collapse " aria-labelledby="heading4"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item ">
+                                <h2 class="faq-title m-0 collapsed " data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="">
+                                    well furnished</h2>
+                                <div id="collapse5" class="accordion-collapse collapse " aria-labelledby="heading5"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,354 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="hero">
+    <section class="hero-sec p-0">
+        <div class="hero-banner">
+            <div class="hero-slider">
+                    {% for item in imageSlider %}
+                    <div class="slide-item">
+                        <img src="{{item.SliderImages.url}}" class="img-fluid">
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+<div class="booking">
+    <div class="container">
+        <section class="booking-sec pt-0">
+            <div class="booking-title text-center">
+                <h2>FOR BOOKING CALL US @ <strong><a href="tel:+977 9835267182">+977 9835267182</a></strong></h2>
+            </div>
+            <div class="features">
+                <div class="row">
+                    {% for item in room %}
+                    <div class="col-lg-4">
+                        <div class="feature-card">
+                            <figure>
+                                <img src="{{item.TypeImage.url}}" class="img-fluid" alt="">
+                            </figure>
+                            <h2>{{ item.TypeName }}</h2>
+                            <p>{{ item.TypeDescription }}</p>
+                            <ul class="booking-btn">
+                                <li><a href="#">BOOK NOW</a></li>
+                                <li><a href="#">ENQUIRE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="lg-image">
+    <section class="lg-sec p-0">
+        <img src="{% static 'images/hero-img2' %}.png" class="img-fluid" alt="">
+    </section>
+</div>
+<div class="faq">
+    <div class="container">
+        <section class="faq-sec">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-intro">
+                        <div class="section-title">
+                            <h2>WHY CHOOSE HOTEL AEROCITY?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-intro ps-5">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-lg-5 col-lg-7">
+                    <div class="faq-content ps-5">
+                        <div class="accordion" id="faq-collapse">
+                            {% for item in aboutDescription %}
+                            <div class="accordion-item">
+                                <h2 class="faq-title m-0 collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse{{item.Id}}" aria-expanded="false">
+                                    {{ item.Titile }}</h2>
+                                <div id="collapse{{item.Id}}" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                    data-bs-parent="#faq-collapse">
+                                    <div class="accordion-body">
+                                        <p>{{ item.Description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="booking-form position-relative">
+    <img src="{% static 'images/hero-img3' %}.png" class="img-fluid" alt="">
+    <section class="form-sec">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    BOOK A ROOM NOW
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div class="form-content">
+        <div class="container">
+            <form>
+                <div class="mobile-title d-none" >
+                <h2>
+                    BOOK A ROOM NOW
+                </h2>
+                </div>
+                <div class="row align-items-center justify-content-around">
+                    <div class="column">
+                        <div class="form-group">
+                            <input type="date" placeholder="Arrival Date" required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <input type="date" placeholder="Departure Date" required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <input type="text" placeholder="Room For">
+                            <span class="icon">
+                                <i class="fas fa-user-friends"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <select>
+                                <option value="" disabled selected>Room Type</option>
+                                {% for item in room %}
+                                    <option>{{item.TypeName}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <button>Book A Room</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="facilities">
+    <div class="container">
+        <section class="facilities-sec">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility1.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>GOOD FOOD</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility2.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>DESIRABLE LOCATION</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility3.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>EASY BOOKING</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility4.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>FULL PRIVACY</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility5.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>FRIENDLY STAFFS</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <figure>
+                            <img src="{% static 'images/facility6.png' %}" class="img-fluid" alt="">
+                        </figure>
+                        <h2>COMFORTABLE STAY</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliq.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+<div class="hotel-beauty position-relative">
+    <div class="beauty-img h-100">
+        <div class="row  position-relative h-100">
+            <div class="offset-lg-6 col-lg-6">
+                <div class="hb-img position-relative h-100">
+                    <div class="single-main-thumb">
+                        <div class="single-thumb">
+                            <a href="{% static 'images/hero-img' %}.png" data-fancybox="img-preview"><img alt="product"
+                                    src="{% static 'images/hero-img' %}.png" class="img-fluid"></a>
+                        </div>
+                        <div class="single-thumb">
+                            <a href="{% static 'images/hero-img2' %}.png" data-fancybox="img-preview"><img alt="product"
+                                    src="{% static 'images/hero-img2' %}.png" class="img-fluid"></a>
+                        </div>
+
+                        <div class="single-thumb">
+                            <a href="{% static 'images/hero-img3' %}.png" data-fancybox="img-preview"><img alt="product"
+                                    src="{% static 'images/hero-img3' %}.png" class="img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="pager-thumbnail">
+
+                    <div class="pager-thumb active">
+                        <img src="{% static 'images/hero-img' %}.png" class="img-fluid">
+                    </div>
+                    <div class="pager-thumb">
+                        <img src="{% static 'images/hero-img2' %}.png" class="img-fluid">
+                    </div>
+                    <div class="pager-thumb">
+                        <img src="{% static 'images/hero-img3' %}.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="beauty-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-intro">
+                        <div class="section-title">
+                            <h2>AMENITIES OF HOTEL AEROCITY</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<div class="best-deal">
+    <div class="deal-img">
+        <img src="{% static 'images/large-img22' %}.png" class="img-fluid">
+    </div>
+    <section class="deal-sec">
+        <div class="container">
+            <img src="{% static 'images/deal.png' %}" class="img-fluid">
+            <div class="deal-content">
+                <h2>GET THE BEST DEALS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+            </div>
+            <div class="deal-form">
+                <h2>CHECK AVAILABILITY</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="date" placeholder="Arrival Date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder="Departure Date Date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Room For">
+                        <span class="icon">
+                            <i class="fas fa-user-friends"></i>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option value="" disabled selected>Room Type</option>
+                            {% for item in room %}
+                                    <option>{{item.TypeName}}</option>
+                                {% endfor %}
+                        </select>
+                    </div>
+                    <button>Book A Room</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</div>
+<div class="gallery">
+    <div class="container">
+        <section class="gallery-sec">
+            <div class="section-intro">
+                <div class="section-title">
+                    <h2>Our Gallery</h2>
+                </div>
+                <p>Take a glance at our beautiful hotel and everything inside of it</p>
+            </div>
+            <div class="gallery-slider pt-3">
+                {% for item in gallery %}
+                <div class="slide-item">
+                    <a href="javascript:volid(0)">
+                        <img src="{{item.SliderImages.url}}" class="img-fluid">
+                        <div class="gallery-intro">
+                            <div class="gallery-title">
+                                <h2>{{item.GalleryTitle}}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2491165144124!2d85.34202811848566!3d27.709593685032957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1979b6a03ae9%3A0xe9f9dda6d4ea7fca!2sPashupati%20Nath%20Road%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1674662633155!5m2!1sen!2snp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+{% endblock %}

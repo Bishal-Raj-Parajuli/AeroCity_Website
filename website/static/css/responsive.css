@@ -1,0 +1,205 @@
+@media (max-width: 1250px){
+    body{
+        font-size: 16px;
+    }
+    h2, .footer-contact ul li,
+    .feature-card h2{
+        font-size: 28px;
+    }
+    .beauty-sec .section-title h2{
+        font-size: 30px;
+    }
+    .section-intro p{
+        font-size: 20px;
+    }
+    .deal-form{
+        right: 12px;
+    }
+    .section-title h2{
+        font-size: 45px;
+    }
+    .booking-sec{
+        max-width: 100%;
+    }
+    .slick-next{
+        right: 1%;
+    }
+    .slick-prev {
+        right: 110px;
+        left: unset;
+    }
+}
+@media (max-width: 1200px){
+    .deal-sec img{
+        position: static;
+        border: 0;
+        display: none;
+    }
+    .deal-content, .deal-form{
+        position: static;
+        margin: 0 12px;
+        width: 50%;
+    }
+    .deal-content{
+        position: relative;
+        top: 0;
+        background: #f5f5f5;
+    }
+    .deal-content:after {
+        right: 10%;
+    }
+    .deal-sec .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .gallery-sec{
+        padding-top: 0;
+    }
+}
+@media (max-width: 991px){
+    .navbar-collapse{
+        display: none !important;
+    }
+/* mobile-menu */
+.navbar>.container{
+    display: flex !important;
+    align-items: center ;
+    justify-content: space-between;
+}
+.navbar h1{
+    margin-bottom: 0;
+}
+.mobile-menu-icon {
+    display: inline-block !important;
+    border: 1px solid;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #000000;
+}
+
+/* mobile-menu close */
+
+    header{
+        position: static;
+    }
+    .hero-slider .slide-item:before{
+        display: none;
+    }
+    .hero-sec .slick-slide img{
+        height:100%;
+        object-fit: cover;
+    }
+    .booking-sec{
+        margin-top: 0;
+    }
+    .feature-card, .section-intro{
+        margin-bottom: 30px;
+    }
+    .faq-sec .ps-5{
+        padding-left: 0 !important;
+    }
+    .beauty-img, .beauty-img .container{
+        position: static;
+        width: 100%;
+    }
+    .beauty-sec .section-intro, .beauty-sec{
+        padding-bottom: 0;
+    }
+    .beauty-img .container{
+        margin:12px 12px 0px;
+    }
+    .pager-thumb img{
+        height: 100px;
+    }
+    .hotel-beauty {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-top: 0;
+    }
+    .form-content .row .column{
+        width: 50%;
+    }
+    .form-sec{
+        position: static;
+        display: none;
+    }
+    .form-content{
+        position: static;
+    }
+    .mobile-title{
+        display: block !important;
+        text-align: center;
+    }
+    .facilities-sec{
+        padding-top: 80px;
+    }
+    .gallery-intro{
+        margin: 10px;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 767px){
+    section{
+        padding: 50px 0;
+    }
+    .hotel-beauty{
+        margin-bottom: 50px;
+    }
+    .gallery-sec{
+        padding-bottom: 100px;
+    }
+    .booking-sec{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form-content .row .column{
+        width: 100%;
+    }
+    .section-title h2{
+        font-size: 36px;
+    }
+    h2, .accordion-item h2.faq-title{
+        font-size: 26px;
+    }
+    .deal-content, .deal-form{
+        width: 100%;
+        max-width: 100%;
+        margin:15px 0;
+    }
+    .deal-content:after{
+        display: none;
+    
+    }
+    select{
+        background-position-x: 97% !important;
+    }
+    .footer-contact ul li{
+        font-size: 22px;
+    }
+    .pager-thumbnail {
+        max-width: 100%;
+    }
+    .pager-thumbnail .slick-track{
+        width: 100% !important;
+        margin:0 -12px;
+    }
+    .gallery-slider .slick-list{
+        padding-right: 50px;
+    }
+    .copy-right {
+        font-size: 14px;
+    }
+    
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 80%;
+}
+}

@@ -1,0 +1,81 @@
+{% load static %}
+<div class="site-content">
+    <header>
+        <div class="main-menu">
+            <nav id="navbar-main" class="navbar navbar-expand-lg  navbar-light">
+                <div class="container d-block text-center">
+                    <h1>
+                        <a href="#" class="navbar-brand">
+                            <img src="{% static 'images/Hotel_Aerocity.png' %}" class="img-fluid" alt="Hotel Aerocity">
+                        </a>
+                    </h1>
+                    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+
+                        <ul class="navbar-nav ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}">Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about_us' %}">ABOUT US
+                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="{% url 'rooms' %}">ROOMS
+                </a>
+
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">CONTACT
+                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-icon d-none ">
+                        <span class="icon"><i class="fas fa-bars"></i></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-navigation">
+        <span class="close-menu">
+            <i class="fas fa-times"></i>
+        </span>
+        <div class="side-menu-header mb-3">
+            <div class="logo">
+                <a href="index.php" class="navbar-brand">
+                <img src="{% static 'images/Hotel_Aerocity.png' %}" class="img-fluid" alt="Hotel Aerocity">
+                </a>
+            </div>
+        </div>
+        <ul id="menu-primary-menu" class="mobile-menu my-3">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SERVICES
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ROOMS
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT US
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ACCOMODATIONS
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="body-overlay"></div>
